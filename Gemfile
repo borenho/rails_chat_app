@@ -13,6 +13,8 @@ gem "autoprefixer-rails"
 gem "bootsnap", require: false
 gem "honeybadger"
 gem "pg"
+gem "redis"
+gem "devise"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 6.0.0"
@@ -37,6 +39,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "pry-byebug"
   gem "pry-rails"
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :test do
