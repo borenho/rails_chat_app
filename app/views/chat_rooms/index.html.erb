@@ -1,2 +1,20 @@
-<h1>ChatRooms#index</h1>
-<p>Find me in app/views/chat_rooms/index.html.erb</p>
+<div class="container mx-auto px-4 py-4">
+  <div class="flex mb-4">
+    <div class="w-1/3 h-12">
+      <%= link_to new_chat_room_path, class: "bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-100 hover:text-white py-2 px-4 rounded" do %>
+        Create a chat room
+      <% end %>
+    </div>
+
+    <% if @chat_rooms.present? %>
+      <div class="w-2/3">
+      <% @chat_rooms.each do |chat_room| %>
+        <%= link_to chat_room.topic, chat_room_path(chat_room) %>
+      <% end %>
+      </div>
+    <% else %>
+      <div>
+        There are no rooms
+      </div>
+    <% end %>
+</div>
