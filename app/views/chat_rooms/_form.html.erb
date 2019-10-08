@@ -1,0 +1,5 @@
+<%= form_with model: @chat_room, url: chat_rooms_path do |form| %>
+  <%= form.text_field :topic %>
+
+  <%= form.submit "Save", class: 'bg-blue-500 text-white py-4 px-4 rounded'%>
+<% end%>
