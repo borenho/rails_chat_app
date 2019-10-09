@@ -6,9 +6,17 @@
   </div> 
 
   <div class="w-2/3">
-    <div class='bg-gray-100 h-full mb-2'>
+    <div class='bg-gray-200 h-full mb-2'>
       <% @messages.each do |message| %>
-        <%= message %>
+        <div class='flex text-white p-4'>
+          <div class='bg-blue-500 w-full p-2 rounded'>
+            <%= message.content %>
+  
+            <div class='text-sm font-hairline float-right'>
+            <small> <%= message.created_at %> </small>
+            </div>
+          </div>
+        </div>
       <% end %>
     </div>
 
